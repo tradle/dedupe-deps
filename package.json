@@ -1,0 +1,38 @@
+{
+  "name": "dedupe-deps",
+  "version": "1.0.0",
+  "description": "deduplicate node_modules in your filesystem before you bundle",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "bin": {
+    "dedupe-deps": "./cmd.js"
+  },
+  "keywords": [
+    "dedupe",
+    "deduplicate",
+    "deduplicate-dependencies",
+    "bundle"
+  ],
+  "author": "mvayngrib",
+  "license": "MIT",
+  "dependencies": {
+    "debug": "~4.1.1",
+    "findit": "^2.0.0",
+    "minimist": "^1.2.0",
+    "p-props": "~1.2.0"
+  },
+  "devDependencies": {
+    "eslint": "~5.15.1",
+    "eslint-config-standard": "~12.0.0",
+    "eslint-plugin-import": "~2.16.0",
+    "eslint-plugin-node": "~8.0.1",
+    "eslint-plugin-promise": "~4.0.1",
+    "eslint-plugin-standard": "~4.0.0",
+    "husky": "~1.3.1",
+    "p-map": "^2.0.0"
+  }
+}
