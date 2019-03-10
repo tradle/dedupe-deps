@@ -25,6 +25,12 @@ node_modules/b/node_modules/super-awesome/index.js
 
 We're going to choose the first one as the canonical super-awesome@1.1.0 and replace js files in the duplicate with `module.exports = require('../path/to/cananocal/file.js')`
 
+## Install
+
+```sh
+npm install --save-dev dedupe-deps
+```
+
 ## Usage
 
 ```sh
