@@ -33,11 +33,14 @@ npm install --save-dev dedupe-deps
 
 ## Usage
 
+
 ```sh
 # run in project root
 # "DEBUG=dedupe-deps" is optional, if you want to see what files are being deduped
 DEBUG=dedupe-deps dedupe-deps --dir .
 ```
+
+To do a dry-run, add a `--dry-run` flag
 
 Or put it in your package.json, e.g.:
 

@@ -4,7 +4,7 @@ const fs = require('./fs')
 const debug = require('./debug')
 const BANNER = '// deduped by dedupe-deps'
 
-const replaceFiles = async ({ name, canonical, duplicate }) => {
+const replaceFiles = async ({ name, canonical, duplicate, dryRun }) => {
   const canDir = path.dirname(canonical.path)
   const dupDir = path.dirname(duplicate.path)
   const remapPath = relDupPath => {
@@ -15,8 +15,11 @@ const replaceFiles = async ({ name, canonical, duplicate }) => {
   const remapFile = async relDupPath => {
     const absDupPath = path.resolve(dupDir, relDupPath)
     const canPath = remapPath(relDupPath)
+    let msg = `deduping module ${name}, file ${absDupPath}`
+    if (dryRun) msg = `DRY RUN: ${msg}`
 
-    debug(`deduping module ${name}, file ${absDupPath}`)
+    debug(msg)
+    if (dryRun) return
 
     return fs.writeFile(
       absDupPath,
