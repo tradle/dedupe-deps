@@ -1,6 +1,6 @@
 {
   "name": "dedupe-deps",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "deduplicate node_modules in your filesystem before you bundle",
   "main": "index.js",
   "scripts": {
