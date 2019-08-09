@@ -1,5 +1,9 @@
 # dedupe-deps
 
+UPDATE: the current implementation has issues with files that have dependencies (require()/import statements). Due to the structure of `node_modules/`, an identical file living in two locations can pull in different copies of dependencies.
+
+see/follow a less opinionated one here: https://github.com/ExodusMovement/find-duplicates
+
 ## TL;DR
 
 problem: multiple copies of the same version of a dependency in both your fs and your bundle
